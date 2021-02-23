@@ -2,7 +2,7 @@
   String Decode  
 */
 
-const str1 = "a3b2c1d3e10";
+const str1 = "a3b2c1d3";
 const expected1 = "aaabbcddd";
 
 /**
@@ -23,6 +23,7 @@ function decodeStr(str) {
   var num = "";
   var decodedStr = "";
   while(p1 !== str.length+1){
+    // controls toggels
     if(numAdd == true && isNaN(str[p1]) == true) {
       count = true;
       numAdd = false;
