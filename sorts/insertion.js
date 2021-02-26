@@ -44,6 +44,7 @@ const expected = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
  * @return {Array<number>} The given array after being sorted.
  */
 function insertionSort(nums) {
+  let count = 0; //delete this
   for(let i = 1; i < nums.length; i++){
     let currIdx = i;
     let leftIdx = i - 1;
@@ -53,7 +54,10 @@ function insertionSort(nums) {
       currIdx--;
       leftIdx = currIdx - 1;
     }
+    count++; //delete this
   }
+  console.log(count); //delete this
+  return(nums);
 }
 
 console.log(insertionSort(numsOrdered));
